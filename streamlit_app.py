@@ -7,5 +7,6 @@ st.set_page_config(page_title = "MEI Chatbot", page_icon = ":robot:", layout = "
 st.subheader("Hi, I am a chatbot :wave:")
 st.title("I help find PDFs")
 st.write("More functionality coming up here!")
-pdfname = input("Enter the Purchase Order to search for: ")
-print(pdfname)
+with st.form(key = "user_input"):
+    srchpdf = st.text_input("Enter the PDF you want to search: ")
+    st.form_submit_button("Search")
